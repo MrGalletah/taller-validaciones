@@ -45,17 +45,15 @@
 
             <div class="col-sm-6">
               <label for="password1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" minlength="6" required>
-              <div class="invalid-feedback">
-                Debe ingresar una contraseña con almenos 6 caracteres.
+              <div class="input-group">
+                <input type="password" class="form-control" id="password1" minlength="6" required>
               </div>
             </div>
-
             <div class="col-sm-6">
               <label for="password2" class="form-label">Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" minlength="6" required>
-              <div class="invalid-feedback">
-                Debe ser igual a "contraseña".
+              <div class="input-group">
+                <input type="password" class="form-control" id="password2" minlength="6" required>
+                <button class="btn btn-secondary" type="button" id="togglePassword">Mostrar contraseñas</button>
               </div>
             </div>
 
@@ -76,7 +74,7 @@
       </form>
 
     </main>
-
+          <!-- FOOTER  -->
     <footer class="my-5 pt-5 text-muted text-center text-small">
       <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
           Programar</a></p>
@@ -84,7 +82,7 @@
         ningún tipo.</p>
     </footer>
   </div>
-
+        <!-- MENSAJE OCULTO CON LOS TERMINOS Y CONDICIONES -->
   <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">

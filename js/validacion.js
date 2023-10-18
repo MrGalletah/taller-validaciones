@@ -1,12 +1,16 @@
+/* ---------------- */
+// VARIABLES GLOBALES
+  const passwordInput1 = document.getElementById('password1');
+  const passwordInput2 = document.getElementById('password2');
+  const toggleButton = document.getElementById('togglePassword');
+
+
+
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
     'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
+      const forms = document.querySelectorAll('.needs-validation')
+     Array.from(forms).forEach(form => {
       form.addEventListener('submit', event => {
         if (!form.checkValidity()) {
           event.preventDefault()
@@ -17,3 +21,19 @@
       }, false)
     })
   })()
+
+// SHOW AND HIDE PASSWORD BUTTON
+  function togglePasswordVisibility() {
+      
+    if (passwordInput1.type === 'password') {
+      passwordInput1.type = 'text';
+      passwordInput2.type = 'text';
+      toggleButton.textContent = 'Ocultar contraseñas';
+    } else {
+      passwordInput1.type = 'password';
+      passwordInput2.type = 'password';
+      toggleButton.textContent = 'Mostrar contraseñas';
+    }
+  }
+  
+  toggleButton.addEventListener('click', togglePasswordVisibility);
