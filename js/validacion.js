@@ -1,48 +1,60 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
-  "use strict";
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll(".needs-validation");
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach((form) => {
-    form.addEventListener(
-      "submit",
-      (event) => {
+    'use strict';
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation');
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
         }
-
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
-
-const pwd1 = document.getElementById("password1");
-const pwd2 = document.getElementById("password2");
-const submit = document.getElementById("submit");
-
-// function checkPwd(pw1, pw2) {
-//   return pw1 === pw2;
-// }
-
-submit.addEventListener("click", (e)=>{
-    
-    if ( document.getElementById("password1").value != document.getElementById("password2").value ) {
-        e.preventDefault()
-        pwd1.setCustomValidity('Password Must be Matching.');
-        pwd2.setCustomValidity('Password Must be Matching.');
-        e.stopPropagation();
-    } else {
-        // input is valid -- reset the error message
-        pwd1.setCustomValidity('');
-        pwd2.setCustomValidity('');
-
-        e.stopPropagation()
-    }
         
-})
+        const password1 = document.getElementById('password1');
+        const password2 = document.getElementById('password2');
+        const firstName = document.getElementById('nombre');
+        const lastName = document.getElementById('apellido');
+        const terms = document.getElementById('terminos');
+        
+        if(password1.value.length < 6 || password1.value !== password2.value){
+            event.preventDefault();
+            password1.classList.add('is-invalid');
+        } else {
+            password1.classList.remove('is-invalid');
+        }
+        
+        if(firstName.value === ''){
+            event.preventDefault();
+            firstName.classList.add('is-invalid');
+        } else {
+            firstName.classList.remove('is-invalid');
+        }
+        
+        if(lastName.value === ''){
+            event.preventDefault();
+            lastName.classList.add('is-invalid');
+        } else {
+            lastName.classList.remove('is-invalid');
+        }
+        
+        if(!terms.checked){
+            event.preventDefault();
+            terms.classList.add('is-invalid');
+        } else {
+            terms.classList.remove('is-invalid');
+        }
+  
+        form.classList.add('was-validated');
+      }, false);
+    });
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+      input.addEventListener('input', () => {
+        input.classList.remove('is-invalid');
+      });
+    });
+  })();
+  
