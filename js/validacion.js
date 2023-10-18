@@ -12,6 +12,19 @@
           event.preventDefault()
           event.stopPropagation()
         }
+        const password1 = document.getElementById('password1');
+        const password2 = document.getElementById('password2');
+        const lastName = document.getElementById('nombre');
+        const name = document.getElementById('apellido');
+        if(password1.value.length <6 || password1.value !== password2.value){
+            event.preventDefault();
+            password1.setCustomValidity('La constrasenas no cumplen con los requisitos');
+            password1.classList.add('is-invalid');
+        }
+        if(lastName.value === ''){
+            
+        }
+
   
         form.classList.add('was-validated')
       }, false)
