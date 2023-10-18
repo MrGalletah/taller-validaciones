@@ -28,11 +28,11 @@
     if (passwordInput1.type === 'password') {
       passwordInput1.type = 'text';
       passwordInput2.type = 'text';
-      toggleButton.textContent = 'Ocultar contraseñas';
+      toggleButton.textContent = 'Ocultar';
     } else {
       passwordInput1.type = 'password';
       passwordInput2.type = 'password';
-      toggleButton.textContent = 'Mostrar contraseñas';
+      toggleButton.textContent = 'Mostrar';
     }
   }
   
