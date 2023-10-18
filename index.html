@@ -1,6 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,9 +8,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body class="bg-light">
-
   <div class="container">
     <main>
       <form action="#" method="get" class="row mt-4 needs-validation" novalidate>
@@ -37,9 +34,9 @@
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g" required>
+              <input type="email" class="form-control" id="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required>
               <div class="invalid-feedback">
-                Debe ingresar un email.
+                Debe ingresar un email válido.
               </div>
             </div>
 
@@ -47,7 +44,7 @@
               <label for="password1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="password1" minlength="6" required>
               <div class="invalid-feedback">
-                Debe ingresar una contraseña con almenos 6 caracteres.
+                Debe ingresar una contraseña con al menos 6 caracteres.
               </div>
             </div>
 
@@ -55,33 +52,29 @@
               <label for="password2" class="form-label">Repetir contraseña</label>
               <input type="password" class="form-control" id="password2" minlength="6" required>
               <div class="invalid-feedback">
-                Debe ser igual a "contraseña".
+                Las contraseñas no coinciden.
               </div>
             </div>
 
             <div class="col-sm-12">
-              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
-                data-bs-target="#modalTerminos" id="terminos" required>Términos del servicio</button>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="terminos">
+                <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
                 <div class="invalid-feedback">
-                  Debe aceptar los terminos del servicio.
+                  Debe aceptar los términos del servicio.
                 </div>
+              </div>
             </div>
 
-
             <button class="btn btn-primary" type="submit">Registrarme</button>
-
-
           </div>
         </div>
       </form>
-
     </main>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
-          Programar</a></p>
-      <p class="mb-1">Es un sitio generado con fines estrictamente educativos. No realiza registros ni guarda datos de
-        ningún tipo.</p>
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
+      <p class="mb-1">Es un sitio generado con fines estrictamente educativos. No realiza registros ni guarda datos de ningún tipo.</p>
     </footer>
   </div>
 
@@ -89,19 +82,14 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5">Términos y condiciones del servicio.</h1>
+          <h1 class="modal-title fs-5">Términos y condiciones del servicio</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quasi sapiente voluptatum deserunt?
-            Deleniti, adipisci vitae in quaerat eius nemo optio? Quas at magni saepe cumque. Delectus perspiciatis omnis
-            accusamus.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quasi sapiente voluptatum deserunt? Deleniti, adipisci vitae in quaerat eius nemo optio? Quas at magni saepe cumque. Delectus perspiciatis omnis accusamus.</p>
         </div>
         <div class="modal-footer">
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="terminos">
-            <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
-          </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
     </div>
@@ -110,5 +98,4 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/validacion.js"></script>
 </body>
-
 </html>
