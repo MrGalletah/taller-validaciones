@@ -14,7 +14,7 @@
 
   <div class="container">
     <main>
-      <form action="#" method="get" class="row mt-4 needs-validation" novalidate>
+      <form action="#" method="get" class="row mt-4 needs-validation" oninput="result.value=!!p2.value&&(p1.value==p2.value)?'Match!':'Nope!'" novalidate>
         <div class="col">
           <h1 class="mb-3">Registro</h1>
           <hr class="my-4">
@@ -45,7 +45,7 @@
 
             <div class="col-sm-6">
               <label for="password1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" minlength="6" required>
+              <input type="password" class="form-control" id="password1" minlength="6" name="p1" required>
               <div class="invalid-feedback">
                 Debe ingresar una contraseña con almenos 6 caracteres.
               </div>
@@ -53,7 +53,7 @@
 
             <div class="col-sm-6">
               <label for="password2" class="form-label">Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" minlength="6" required>
+              <input type="password" class="form-control" id="password2" minlength="6" name="p2" required>
               <div class="invalid-feedback">
                 Debe ser igual a "contraseña".
               </div>
@@ -68,7 +68,7 @@
             </div>
 
 
-            <button class="btn btn-primary" type="submit">Registrarme</button>
+            <button class="btn btn-primary" type="submit" id="submit">Registrarme</button>
 
 
           </div>
