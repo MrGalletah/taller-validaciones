@@ -37,7 +37,7 @@
 
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g" required>
+              <input type="email" class="form-control" id="email" required>
               <div class="invalid-feedback">
                 Debe ingresar un email.
               </div>
@@ -60,32 +60,14 @@
             </div>
 
             <div class="col-sm-12">
-              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal"
-                data-bs-target="#modalTerminos" id="terminos" required>Términos del servicio</button>
+              <button type="button" class="btn" data-bs-toggle="modal"
+                data-bs-target="#modalTerminos" id="btnTerms">Términos del servicio</button>
                 <div class="invalid-feedback">
                   Debe aceptar los terminos del servicio.
                 </div>
             </div>
 
-
-            <button class="btn btn-primary" type="submit" id="submit">Registrarme</button>
-
-
-          </div>
-        </div>
-      </form>
-
-    </main>
-
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
-          Programar</a></p>
-      <p class="mb-1">Es un sitio generado con fines estrictamente educativos. No realiza registros ni guarda datos de
-        ningún tipo.</p>
-    </footer>
-  </div>
-
-  <div class="modal fade" id="modalTerminos" tabindex="-1" aria-hidden="true">
+     <div class="modal fade" id="modalTerminos" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -106,6 +88,27 @@
       </div>
     </div>
   </div>
+
+
+  
+           <button class="btn btn-primary" type="submit" id="submit">Registrarme</button>
+
+
+          </div>
+        </div>
+      </form>
+
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
+          Programar</a></p>
+      <p class="mb-1">Es un sitio generado con fines estrictamente educativos. No realiza registros ni guarda datos de
+        ningún tipo.</p>
+    </footer>
+  </div>
+
+      
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/validacion.js"></script>

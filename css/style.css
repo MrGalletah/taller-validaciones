@@ -1,3 +1,11 @@
 .container {
   max-width: 960px;
 }
+
+#btnTerms.is-invalid {
+color: red !important; 
+}
+
+#btnTerms {
+color: #007bff;
+}
