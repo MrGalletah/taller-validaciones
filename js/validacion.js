@@ -95,11 +95,21 @@
       });
     });
   })();
+
+  const btnTerms = document.getElementById('btnTerms');
+  const terms = document.getElementById('terminos');
+
+  terms.addEventListener("click", (e)=>{ 
+
+    terms.classList.toggle("is-valid");
+    btnTerms.classList.toggle("is-valid");
+
+  })
   
-  function checkEmail(email){
-if(email.checkValidity()){
-    return true
-}else {
-    return false
-}
-  };
+   function checkEmail(email){
+ if(email.checkValidity()){
+     return true
+ }else {
+     return false
+ }
+   };
